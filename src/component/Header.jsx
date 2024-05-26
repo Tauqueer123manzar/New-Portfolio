@@ -14,12 +14,12 @@ const Header = () => {
             style={{ maxHeight: '350px',fontSize:"20px",fontFamily:"initial"}}
             navbarScroll
           >
-            <Nav.Link href="/" style={{marginLeft:"20px",color:"white"}}>Home</Nav.Link>
-            <Nav.Link href="/features" style={{marginLeft:"20px",color:"white"}}>Features</Nav.Link>
-            <Nav.Link href='/projects' style={{marginLeft:"20px",color:"white"}}>Projects</Nav.Link>
-            <Nav.Link href='/resume' style={{marginLeft:"20px",color:"white"}}>Resume</Nav.Link>
-            <Nav.Link href='/testinomial' style={{marginLeft:"20px",color:"white"}}>Testimonial</Nav.Link>
-            <Nav.Link href='/contact' style={{marginLeft:"20px",color:"white"}}>Contacts</Nav.Link>
+            <Nav.Link href="#home" style={{marginLeft:"20px",color:"white"}}>Home</Nav.Link>
+            <Nav.Link href="#features" style={{marginLeft:"20px",color:"white"}}>Features</Nav.Link>
+            <Nav.Link href='#projects' style={{marginLeft:"20px",color:"white"}}>Projects</Nav.Link>
+            <Nav.Link href='#resume' style={{marginLeft:"20px",color:"white"}}>Resume</Nav.Link>
+            <Nav.Link href='#testinomial' style={{marginLeft:"20px",color:"white"}}>Testimonial</Nav.Link>
+            <Nav.Link href='#contact' style={{marginLeft:"20px",color:"white"}}>Contacts</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

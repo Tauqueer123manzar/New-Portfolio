@@ -1,0 +1,17 @@
+.card-hover {
+    transition: transform 0.3s, shadow 0.3s;
+}
+
+.card-hover:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(26, 142, 142, 0.2);
+    cursor: pointer;
+}
+
+.icon-animation {
+    transition: color 0.3s;
+}
+
+.card-hover:hover .icon-animation {
+    color: #b5de00;
+}
