@@ -57,9 +57,8 @@ const Features = () => {
           {
             featureData.map(Features => {
               return (
-                <Col sm={4} md={6} lg={4}>
-                  <Card className="bg-secondary card-hover" style={{ width: '24rem',height:"350px",margin:"10px",padding:"10px"}} key={Features.id}>
-                    {/* <Card.Img variant="top" src={Features.icon}/> */}
+                <Col sm={8} md={6} lg={4}>
+                  <Card className="bg-secondary card-hover" style={{ width: '22rem',height:"350px",margin:"10px",padding:"5px"}} key={Features.id}>
                     <Card.Body
                      className='text-center m-5 text-danger'> {Features.icon}
                       <Card.Title className='text-white fs-3'>{Features.title}</Card.Title>

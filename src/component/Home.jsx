@@ -17,8 +17,8 @@ const Home = () => {
               words={['Hi There,I am Md Tauqueer Manzar']}
               loop={false}
               cursor
-              typeSpeed={100}
-              deleteSpeed={50}
+              typeSpeed={150}
+              deleteSpeed={100}
               delaySpeed={1000}
             />
          </h1>
@@ -32,7 +32,7 @@ const Home = () => {
               delaySpeed={1000}
             />
           </h1>
-          <p className='text-white m-5 fs-4' style={{ fontFamily: "initial" }}>a passionate full stack web developer with a keen interest in crafting immersive web experiences. My journey into the world of web development started with a curiosity for building things that live on the internet. Now, I specialize in creating dynamic and responsive web applications that not only look great but also perform flawlessly.</p>
+          <p className='text-white m-5 fs-5' style={{ fontFamily: "Initial" }}>a passionate full stack web developer with a keen interest in crafting immersive web experiences. My journey into the world of web development started with a curiosity for building things that live on the internet. Now, I specialize in creating dynamic and responsive web applications that not only look great but also perform flawlessly.</p>
           <p className='text-white m-5 fs-4' style={{ fontFamily: "serif" }}>FIND ME IN</p>
           <div className='m-5'>
           <a
