@@ -13,7 +13,7 @@ const Features = () => {
   var featureData = [
     {
       id: 1,
-      icon: <IoBusinessSharp size={50} className='icon-animation'/>,
+      icon: <IoBusinessSharp size={50} className='icon-animation' />,
       title: "Business Strategy",
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque solutahic consequuntur eum repellendus ad'
     },
@@ -25,7 +25,7 @@ const Features = () => {
     },
     {
       id: 3,
-      icon: <SiAntdesign size={50} className='icon-animation'/>,
+      icon: <SiAntdesign size={50} className='icon-animation' />,
       title: "UX Design",
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque solutahic consequuntur eum repellendus ad'
     },
@@ -37,13 +37,13 @@ const Features = () => {
     },
     {
       id: 5,
-      icon: <SiSimilarweb size={50} className='icon-animation'/>,
+      icon: <SiSimilarweb size={50} className='icon-animation' />,
       title: "Web Hosting",
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque solutahic consequuntur eum repellendus ad'
     },
     {
       id: 6,
-      icon: <FaDatabase  size={50} className='icon-animation'/>,
+      icon: <FaDatabase size={50} className='icon-animation' />,
       title: "Database",
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque solutahic consequuntur eum repellendus ad'
     }
@@ -58,12 +58,12 @@ const Features = () => {
             featureData.map(Features => {
               return (
                 <Col sm={12} md={6} lg={4} key={Features.id}>
-                  <Card className="bg-secondary card-hover" style={{ width: '21rem',height:"350px",margin:"10px",padding:"5px"}}>
+                  <Card className="bg-secondary card-hover" style={{ width: '21rem', height: "350px", margin: "10px", padding: "5px" }}>
                     <Card.Body
-                     className='text-center m-5 text-danger'> {Features.icon}
+                      className='text-center m-5 text-danger'> {Features.icon}
                       <Card.Title className='text-white fs-3'>{Features.title}</Card.Title>
                       <Card.Text className='text-white'>
-                       {Features.description}
+                        {Features.description}
                       </Card.Text>
                     </Card.Body>
                   </Card>
@@ -73,7 +73,7 @@ const Features = () => {
           }
         </Row>
       </Container>
-      <hr style={{borderColor:"white",margin:"0"}}/>
+      <hr style={{ borderColor: "white", margin: "0" }} />
     </section>
   )
 }
