@@ -17,11 +17,11 @@ const Contact = () => {
             <Card className="card-hover" style={{ width: '25rem', height: "auto", backgroundColor: "#23272b" }}>
               <Card.Img variant="top" style={{ width: "auto", height: "400px", padding: "25px" }} src={photo} />
               <Card.Body>
-                <Card.Title className='text-white p-2'>MD TAUQUEER MANZAR</Card.Title>
+                <Card.Title className='text-white p-2' style={{fontWeight:"700"}}>MD TAUQUEER MANZAR</Card.Title>
                 <Card.Text className='text-white p-2'>
                   MERN Stack Developer
                 </Card.Text>
-                <Card.Text className='text-white p-2'>
+                <Card.Text className='text-white p-1'>
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis ipsam autem cumque, accusantium dicta odio.
                 </Card.Text>
                 <Card.Text className='text-white p-2'>
@@ -44,7 +44,7 @@ const Contact = () => {
 
                 <Form.Group as={Col} controlId="formGridlname">
                   <Form.Label>Last Name</Form.Label>
-                  <Form.Control type="password" placeholder="Last name" />
+                  <Form.Control type="text" placeholder="Last name" />
                 </Form.Group>
               </Row>
               <Row className="mb-4 ">
@@ -97,7 +97,7 @@ const Contact = () => {
               <Button variant="primary" type="submit" style={{ width: "100%" }}>
                 Submit
               </Button>
-              
+
               <p className='text-white fs-4 d-flex justify-content-center align-items-center' style={{ fontFamily: "serif", marginLeft: "10px", marginTop: "10px" }}>FIND ME IN</p>
               <div className="d-flex justify-content-center align-items-center" style={{ marginLeft: "10px" }}>
                 <a
@@ -124,6 +124,8 @@ const Contact = () => {
           </Col>
         </Row>
       </Container>
+      <hr style={{borderColor:"white",marginTop:"12px"}}/> 
+      <footer className='mt-4 p-4 text-danger text-center'>© 2024. All rights reserved by Md Tauqueer manzar</footer>
     </section>
   )
 }

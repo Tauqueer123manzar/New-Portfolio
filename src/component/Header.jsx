@@ -18,7 +18,7 @@ const Header = () => {
             <Nav.Link href="#features" style={{marginLeft:"20px",color:"white"}}>Features</Nav.Link>
             <Nav.Link href='#projects' style={{marginLeft:"20px",color:"white"}}>Projects</Nav.Link>
             <Nav.Link href='#resume' style={{marginLeft:"20px",color:"white"}}>Resume</Nav.Link>
-            <Nav.Link href='#testinomial' style={{marginLeft:"20px",color:"white"}}>Testimonial</Nav.Link>
+            {/* <Nav.Link href='#testinomial' style={{marginLeft:"20px",color:"white"}}>Testimonial</Nav.Link> */}
             <Nav.Link href='#contact' style={{marginLeft:"20px",color:"white"}}>Contacts</Nav.Link>
           </Nav>
         </Navbar.Collapse>

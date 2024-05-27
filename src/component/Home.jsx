@@ -4,7 +4,6 @@ import { Container, Row, Col, Image } from 'react-bootstrap';
 import myImage from '../../src/assets/image.png'
 import newimage from '../../src/assets/Image1.png';
 import '@fortawesome/fontawesome-free/css/all.min.css';
-// import Feature from './Features';
 const Home = () => {
   return (
     <section id="home">
@@ -61,8 +60,8 @@ const Home = () => {
             src={myImage}
             rounded
             alt="My Image"
-            className='m-2 shadow rounded'
-            style={{ maxWidth: '100%', height: "80%" }}
+            className='m-2 rounded'
+            style={{ maxWidth: '100%', height: "80%",boxShadow:"0 5px 5px 5px rgba(3, 181, 62, 0.2)"}}
           />
         </Col>
       </Row>
