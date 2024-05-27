@@ -15,7 +15,8 @@ const Projects = () => {
       id:1,
       Image:Ecommerce,
       title:"Ecommerce Website",
-      icon:<FaGithub size={50}/>,
+      icon:<FaGithub size={26}/>,
+      href:'https://github.com/Tauqueer123manzar/Ecommerce',
       description:"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo quibusdam voluptate sapiente voluptatibus harum quidem!"
 
     },
@@ -23,7 +24,8 @@ const Projects = () => {
       id:2,
       Image:Doctor,
       title:"Doctor Appointment",
-      icon:<FaGithub size={50}/>,
+      icon:<FaGithub size={26}/>,
+      href:"https://github.com/Tauqueer123manzar/Doctor-Appointment-application",
       description:"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo quibusdam voluptate sapiente voluptatibus harum quidem!"
 
     },
@@ -31,7 +33,8 @@ const Projects = () => {
       id:3,
       Image:Portfolio,
       title:"Portfolio",
-      icon:<FaGithub size={50}/>,
+      icon:<FaGithub size={26}/>,
+      href:"https://github.com/Tauqueer123manzar/New-Portfolio",
       description:"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo quibusdam voluptate sapiente voluptatibus harum quidem!"
 
     },
@@ -39,7 +42,8 @@ const Projects = () => {
       id:4,
       Image:JobSeeking,
       title:"Job Seeking application",
-      icon:<FaGithub size={50}/>,
+      icon:<FaGithub size={26}/>,
+      href:"",
       description:"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo quibusdam voluptate sapiente voluptatibus harum quidem!"
 
     },
@@ -47,7 +51,8 @@ const Projects = () => {
       id:5,
       Image:Weather,
       title:"Weather Application",
-      icon:<FaGithub size={50}/>,
+      icon:<FaGithub size={26}/>,
+      href:"https://github.com/Tauqueer123manzar/Weather-App",
       description:"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo quibusdam voluptate sapiente voluptatibus harum quidem!"
 
     },
@@ -55,7 +60,8 @@ const Projects = () => {
       id:6,
       Image:Youtube,
       title:"Youtube summarizer",
-      icon:<FaGithub size={50}/>,
+      icon:<FaGithub size={26}/>,
+      href:"https://github.com/Tauqueer123manzar/Youtube-clip-summarizer",
       description:"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo quibusdam voluptate sapiente voluptatibus harum quidem!"
 
     }
@@ -70,16 +76,16 @@ const Projects = () => {
             projectData.map(projects=>{
               return(
                 <Col sm={12} md={6} lg={4} key={projects.id}>
-                <Card className="bg-black card-hover" style={{ width: '21rem',height:"450px",margin:"10px",padding:"5px"}}>
+                <Card className="bg-black card-hover" style={{ width: '21rem',height:"426px",margin:"10px",padding:"5px"}}>
                 <Card.Img style={{width:"20rem",height:"200px"}} variant="top" src={projects.Image} />
                     <Card.Body >
                     <div className='d-flex justify-content-between align-items-center'>
-                      <Card.Title className='text-info fs-3 mb-0'>{projects.title}</Card.Title>
-                      <a href="https://github.com/Tauqueer123manzar" target="_blank" rel="noopener noreferrer" className='text-secondary'>
+                      <Card.Title className='text-danger fs-5 mb-0'>{projects.title}</Card.Title>
+                      <a href={projects.href} target="_blank" rel="noopener noreferrer" className='text-secondary'>
                         {projects.icon}
                       </a>
                     </div>
-                      <Card.Text className='text-white'>
+                      <Card.Text className='text-white p-2'>
                        {projects.description}
                       </Card.Text>
                     </Card.Body>
