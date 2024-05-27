@@ -57,8 +57,8 @@ const Features = () => {
           {
             featureData.map(Features => {
               return (
-                <Col sm={8} md={6} lg={4}>
-                  <Card className="bg-secondary card-hover" style={{ width: '22rem',height:"350px",margin:"10px",padding:"5px"}} key={Features.id}>
+                <Col sm={12} md={6} lg={4} key={Features.id}>
+                  <Card className="bg-secondary card-hover" style={{ width: '21rem',height:"350px",margin:"10px",padding:"5px"}}>
                     <Card.Body
                      className='text-center m-5 text-danger'> {Features.icon}
                       <Card.Title className='text-white fs-3'>{Features.title}</Card.Title>
@@ -73,6 +73,7 @@ const Features = () => {
           }
         </Row>
       </Container>
+      <hr style={{borderColor:"white",margin:"0"}}/>
     </section>
   )
 }

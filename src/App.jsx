@@ -12,8 +12,8 @@ function App() {
      <Header/>
      <Home/>
      <Features/>
-     {/* <Project/>
-     <Resume/>
+     <Project/>
+     {/* <Resume/>
      <Testinomial/>
      <Contacts/> */}
    </>
