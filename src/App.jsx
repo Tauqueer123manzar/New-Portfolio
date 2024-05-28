@@ -4,7 +4,6 @@ import Home from './component/Home';
 import Features from './component/Features';
 import Project from './component/Projects';
 import Resume from './component/Resume';
-import Testinomial from './component/Testinomial';
 import Contacts from './component/Contact';
 function App() {
   return (
@@ -14,7 +13,6 @@ function App() {
      <Features/>
      <Project/>
      <Resume/>
-     {/* <Testinomial/> */}
      <Contacts/>
    </>
   )

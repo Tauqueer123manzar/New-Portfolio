@@ -51,7 +51,7 @@ const Resume = () => {
       id: "2",
       position: "Intern",
       company: "Afame Technologies",
-      duration: "September 2022 - May 2023",
+      duration: "May 2024 - June 2024",
       description: "Web Development"
     },
     {
@@ -72,10 +72,10 @@ const Resume = () => {
 
           {/* Education Column */}
           <Col sm={12} md={6} lg={4} className="mb-4" style={{ borderLeft: "1px solid white", padding: "15px" }}>
-            <div className='text-danger text-center mb-3' style={{ fontSize: "30px", fontFamily: "serif" }}>Education</div>
+            <div className='text-danger text-center mb-3 card-hover' style={{ fontSize: "30px", fontFamily: "serif" }}>Education</div>
             {
               educationData.map((education) => (
-                <Card key={education.id} style={{ width: '100%', marginBottom: '15px' }}>
+                <Card  className="card-style" key={education.id} style={{ width: '100%', marginBottom: '15px' }}>
                   <Card.Body>
                     <Card.Title className='text-danger'>{education.course}</Card.Title>
                     <Card.Text>{education.University}</Card.Text>
@@ -94,7 +94,7 @@ const Resume = () => {
 
           {/* Skills Column */}
           <Col sm={12} md={6} lg={4} className="mb-4" style={{ borderLeft: "1px solid white", padding: "15px" }}>
-            <div className='text-danger text-center mb-3' style={{ fontSize: "30px", fontFamily: "serif" }}>Skills</div>
+            <div className='text-danger text-center mb-3 card-hover' style={{ fontSize: "30px", fontFamily: "serif" }}>Skills</div>
             {skillsData.map((skill, index) => (
               <div key={index} className="mb-1">
                 <div className='text-white mb-1' style={{fontSize:"17px"}}>{skill.skill}</div>
@@ -104,11 +104,11 @@ const Resume = () => {
           </Col>
 
           {/* Experience Column */}
-          <Col sm={12} md={6} lg={4} className="mb-4" style={{ borderLeft: "1px solid white", padding: "15px" }}>
-            <div className='text-danger text-center mb-3' style={{ fontSize: "30px", fontFamily: "serif" }}>Experience</div>
+          <Col sm={12} md={6} lg={4} className="mb-4 " style={{ borderLeft: "1px solid white", padding: "15px" }}>
+            <div className='text-danger text-center mb-3 card-hover' style={{ fontSize: "30px", fontFamily: "serif" }}>Experience</div>
             {
               experienceData.map((experience) => (
-                <Card key={experience.id} style={{ width: '100%', marginBottom: '15px' }}>
+                <Card className='card-style' key={experience.id} style={{ width: '100%', marginBottom: '15px' }}>
                   <Card.Body>
                     <Card.Title className='text-danger'>{experience.position}</Card.Title>
                     <Card.Text>{experience.company}</Card.Text>
