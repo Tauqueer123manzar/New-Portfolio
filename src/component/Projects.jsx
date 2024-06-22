@@ -17,7 +17,7 @@ const Projects = () => {
       title: "Ecommerce Website",
       icon: <FaGithub size={26} />,
       href: 'https://github.com/Tauqueer123manzar/Ecommerce',
-      description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo quibusdam voluptate sapiente voluptatibus harum quidem!"
+      description: "The eCommerce platform development project aims to create a comprehensive online marketplace that offers a seamless shopping experience for user."
 
     },
     {
@@ -26,7 +26,7 @@ const Projects = () => {
       title: "Doctor Appointment",
       icon: <FaGithub size={26} />,
       href: "https://github.com/Tauqueer123manzar/Doctor-Appointment-application",
-      description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo quibusdam voluptate sapiente voluptatibus harum quidem!"
+      description: "The Doctor Appointment System project aims to create an efficient and user-friendly platform that simplifies the process of booking and managing medical appointments. "
 
     },
     {
@@ -35,7 +35,7 @@ const Projects = () => {
       title: "Portfolio",
       icon: <FaGithub size={26} />,
       href: "https://github.com/Tauqueer123manzar/New-Portfolio",
-      description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo quibusdam voluptate sapiente voluptatibus harum quidem!"
+      description: "The Personal Portfolio Website project aims to create a professional and visually appealing platform that showcases an individual's skills, experiences, projects, and achievements"
 
     },
     {
@@ -44,7 +44,7 @@ const Projects = () => {
       title: "Job Seeking application",
       icon: <FaGithub size={26} />,
       href: "",
-      description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo quibusdam voluptate sapiente voluptatibus harum quidem!"
+      description: "The Job Seeking Platform project aims to develop a comprehensive and user-friendly online job portal that connects job seekers with potential employers. "
 
     },
     {
@@ -53,7 +53,7 @@ const Projects = () => {
       title: "Weather Application",
       icon: <FaGithub size={26} />,
       href: "https://github.com/Tauqueer123manzar/Weather-App",
-      description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo quibusdam voluptate sapiente voluptatibus harum quidem!"
+      description: "The Weather Application project aims to develop a user-friendly and visually appealing platform that provides accurate and up-to-date weather information."
 
     },
     {
@@ -62,7 +62,7 @@ const Projects = () => {
       title: "Youtube summarizer",
       icon: <FaGithub size={26} />,
       href: "https://github.com/Tauqueer123manzar/Youtube-clip-summarizer",
-      description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo quibusdam voluptate sapiente voluptatibus harum quidem!"
+      description: "The YouTube Text Summarizer project aims to develop a tool that extracts and summarizes the key points from YouTube video transcripts."
 
     }
   ];
@@ -76,7 +76,7 @@ const Projects = () => {
             projectData.map(projects => {
               return (
                 <Col sm={12} md={6} lg={4} key={projects.id}>
-                  <Card className="bg-black card-hover" style={{ width: '21rem', height: "426px", margin: "10px", padding: "5px" }}>
+                  <Card className="bg-black card-hover" style={{ width: '21rem', height: "426px", margin: "8px", padding: "10px", marginLeft: "auto", marginRight: "auto"}}>
                     <Card.Img style={{ width: "20rem", height: "200px" }} variant="top" src={projects.Image} />
                     <Card.Body >
                       <div className='d-flex justify-content-between align-items-center'>

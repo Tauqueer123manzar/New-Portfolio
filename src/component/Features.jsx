@@ -15,37 +15,37 @@ const Features = () => {
       id: 1,
       icon: <IoBusinessSharp size={50} className='icon-animation' />,
       title: "Business Strategy",
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque solutahic consequuntur eum repellendus ad'
+      description: 'This strategy outlines the business plan for a company specializing in the development of web applications. '
     },
     {
       id: 2,
       icon: <MdApps size={50} className='icon-animation' />,
       title: "App Development",
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque solutahic consequuntur eum repellendus ad'
+      description: 'App development involves a systematic process of designing, creating, and deploying mobile applications.'
     },
     {
       id: 3,
       icon: <SiAntdesign size={50} className='icon-animation' />,
       title: "UX Design",
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque solutahic consequuntur eum repellendus ad'
+      description: 'User Experience (UX) design is a critical aspect of creating digital products, including websites, mobile apps, and software applications. '
     },
     {
       id: 4,
       icon: <MdOutlineInstallMobile size={50} className='icon-animation' />,
       title: "Mobile Development",
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque solutahic consequuntur eum repellendus ad'
+      description: 'Mobile development refers to the process of creating software applications that are specifically designed to run on mobile devices.'
     },
     {
       id: 5,
       icon: <SiSimilarweb size={50} className='icon-animation' />,
       title: "Web Hosting",
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque solutahic consequuntur eum repellendus ad'
+      description: 'Web hosting is a service that allows individuals and organizations to make their websites accessible via the World Wide Web.'
     },
     {
       id: 6,
       icon: <FaDatabase size={50} className='icon-animation' />,
       title: "Database",
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque solutahic consequuntur eum repellendus ad'
+      description: 'A database is an organized collection of data stored and managed electronically, typically in a computer system.'
     }
   ];
   return (
@@ -58,7 +58,7 @@ const Features = () => {
             featureData.map(Features => {
               return (
                 <Col sm={12} md={6} lg={4} key={Features.id}>
-                  <Card className="bg-secondary card-hover" style={{ width: '21rem', height: "350px", margin: "10px", padding: "5px" }}>
+                  <Card className="bg-secondary card-hover" style={{ width: '20rem', height: "350px", margin: "7px", padding: "10px", marginLeft: "auto", marginRight: "auto" }}>
                     <Card.Body
                       className='text-center m-5 text-danger'> {Features.icon}
                       <Card.Title className='text-white fs-3'>{Features.title}</Card.Title>

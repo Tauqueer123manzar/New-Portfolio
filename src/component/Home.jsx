@@ -11,7 +11,7 @@ const Home = () => {
       <Row>
         <Col sm={12} md={6} lg={8} className='text-md-left' style={{ marginTop: "20px" }}>
           <p className='m-5 text-white'>WELCOME TO MY WORLD</p>
-          <h1 className='text-info m-5 fs-1' style={{ fontFamily: "sans-serif",fontWeight:"700"}}>
+          <h1 className='m-5 fs-1' style={{color:"rgb(255 1 79 )",fontFamily: "sans-serif",fontWeight:"700"}}>
           <Typewriter
               words={['Hi There,I am Md Tauqueer Manzar']}
               loop={false}
@@ -21,7 +21,7 @@ const Home = () => {
               delaySpeed={1000}
             />
          </h1>
-          <h1 className="text-danger m-5 fs-2" style={{ fontFamily: "sans-serif"}}>
+          <h1 className="m-5 fs-2" style={{ color:"#f32418",fontFamily: "sans-serif"}}>
             <Typewriter
               words={['I am a Full Stack Web Developer,Frontend_Designer.']}
               loop={false}
@@ -31,8 +31,8 @@ const Home = () => {
               delaySpeed={1000}
             />
           </h1>
-          <p className='text-white m-5 fs-5' style={{ fontFamily: "Initial" }}>a passionate full stack web developer with a keen interest in crafting immersive web experiences. My journey into the world of web development started with a curiosity for building things that live on the internet. Now, I specialize in creating dynamic and responsive web applications that not only look great but also perform flawlessly.</p>
-          <p className='text-white m-5 fs-4' style={{ fontFamily: "serif" }}>FIND ME IN</p>
+          <p className='text-white m-5 fs-5' style={{ fontFamily:"sans-serif" }}>a passionate full stack web developer with a keen interest in crafting immersive web experiences. My journey into the world of web development started with a curiosity for building things that live on the internet. Now, I specialize in creating dynamic and responsive web applications that not only look great but also perform flawlessly.</p>
+          <p className='m-5 fs-4' style={{color:"#f45678", fontFamily: "serif" }}>FIND ME IN</p>
           <div className='m-5'>
           <a
             href="https://github.com/Tauqueer123manzar"
@@ -51,7 +51,7 @@ const Home = () => {
             <i className="fab fa-code"></i></a>
           <a
             href='https://www.geeksforgeeks.org/user/mdtauqueermanzar/'
-            className='text-success m-4 shadow fs-4 btn btn-secondary'
+            className='text-success m-3 shadow fs-4 btn btn-secondary'
             ><i className="fas fa-graduation-cap"></i></a>
             </div>
         </Col>

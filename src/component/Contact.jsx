@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Card from 'react-bootstrap/Card';
 import photo from '../assets/Image1.png'
 import { Container, Row, Col } from 'react-bootstrap';
@@ -6,6 +6,61 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import '../App.css'
 const Contact = () => {
+  const[fname,setFname]=useState("");
+  const[lname,setLname]=useState("");
+  const[email,setEmail]=useState("");
+  const[password,setPassword]=useState("");
+  const[address1,setAddress1]=useState("");
+  const[address2,setAddress2]=useState("");
+  const[city,setCity]=useState("");
+  const[state,setState]=useState("");
+  const[zip,setZip]=useState("");
+
+  const handlesubmit=async(e)=>{
+    e.preventDefault("");
+
+  const contactdetails={
+    fname,
+    lname,
+    email,
+    password,
+    address1,
+    address2,
+    city,
+    state,
+    zip
+  };
+
+  try{
+    const response = await fetch("http://localhost:5000/submit",{
+      method:"POST",
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(contactdetails),
+    });
+    if(response.ok){
+      console.log("contact saved");
+
+      // for clear form
+      setFname('');
+      setLname('');
+      setEmail('');
+      setPassword('');
+      setAddress1('');
+      setAddress2('');
+      setCity('');
+      setState('');
+      setZip('');
+    } else{
+      console.log("Error saving contact");
+    }
+  }
+  catch(error){
+    console.error('Error:', error);
+  }
+};
+
   return (
     <section id="contact" className='bg-dark' style={{ maxWidth: "100%", maxHeight: "100%" }}>
       <Container fluid>
@@ -14,15 +69,15 @@ const Contact = () => {
         <Row className="mt-4">
 
           <Col sm={12} md={5} lg={4}>
-            <Card className="card-hover" style={{ width: '25rem', height: "auto", backgroundColor: "#23272b" }}>
-              <Card.Img variant="top" style={{ width: "auto", height: "400px", padding: "25px" }} src={photo} />
+            <Card className="card-hover" style={{ width: '23rem', height: "auto", backgroundColor: "#23272b" }}>
+              <Card.Img variant="top" style={{ width: "auto", height: "400px", padding: "15px" }} src={photo} />
               <Card.Body>
                 <Card.Title className='text-white p-2' style={{fontWeight:"700"}}>MD TAUQUEER MANZAR</Card.Title>
                 <Card.Text className='text-white p-2'>
                   MERN Stack Developer
                 </Card.Text>
                 <Card.Text className='text-white p-1'>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis ipsam autem cumque, accusantium dicta odio.
+                The MERN Stack Web Application project aims to develop a comprehensive and robust web application using the MERN stack (MongoDB, Express.js, React.js, Node.js).
                 </Card.Text>
                 <Card.Text className='text-white p-2'>
                   Phone: +91-7549200441
@@ -35,49 +90,77 @@ const Contact = () => {
           </Col>
 
           <Col sm={12} md={7} lg={8}>
-            <Form className='card-hover p-2 bg-#23272b rounded'>
+            <Form className='card-hover p-2 bg-#23272b rounded' onSubmit={handlesubmit}>
               <Row className="mb-4">
                 <Form.Group as={Col} controlId="formGridfname">
                   <Form.Label>First Name</Form.Label>
-                  <Form.Control type="text" placeholder="First name" />
+                  <Form.Control
+                   type="text"
+                   value={fname}
+                   onChange={(e)=> setFname(e.target.value)}
+                   placeholder="First name" />
                 </Form.Group>
 
                 <Form.Group as={Col} controlId="formGridlname">
                   <Form.Label>Last Name</Form.Label>
-                  <Form.Control type="text" placeholder="Last name" />
+                  <Form.Control
+                   type="text" 
+                   value={lname}
+                   onChange={(e)=> setLname(e.target.value)}
+                   placeholder="Last name" />
                 </Form.Group>
               </Row>
               <Row className="mb-4 ">
                 <Form.Group as={Col} controlId="formGridEmail">
                   <Form.Label>Email</Form.Label>
-                  <Form.Control type="email" placeholder="Enter email" />
+                  <Form.Control
+                   type="email"
+                   value={email}
+                   onChange={(e)=> setEmail(e.target.value)}
+                   placeholder="Enter email" />
                 </Form.Group>
 
                 <Form.Group as={Col} controlId="formGridPassword">
                   <Form.Label>Password</Form.Label>
-                  <Form.Control type="password" placeholder="Password" />
+                  <Form.Control
+                   type="password"
+                   value={password}
+                   onChange={(e)=> setPassword(e.target.value)}
+                   placeholder="Password" />
                 </Form.Group>
               </Row>
 
               <Form.Group className="mb-4" controlId="formGridAddress1">
-                <Form.Label>Address</Form.Label>
-                <Form.Control placeholder="Vill ward-no block" />
+                <Form.Label>Address 1</Form.Label>
+                <Form.Control
+                 value={address1}
+                 onChange={(e)=> setAddress1(e.target.value)}
+                 placeholder="Vill ward-no block" />
               </Form.Group>
 
               <Form.Group className="mb-4" controlId="formGridAddress2">
                 <Form.Label>Address 2</Form.Label>
-                <Form.Control placeholder="Apartment, studio, or floor" />
+                <Form.Control 
+                value={address2}
+                onChange={(e)=> setAddress2(e.target.value)}
+                placeholder="Apartment, studio, or floor" />
               </Form.Group>
 
               <Row className="mb-4">
                 <Form.Group as={Col} controlId="formGridCity">
                   <Form.Label>City</Form.Label>
-                  <Form.Control placeholder='City' />
+                  <Form.Control 
+                  value={city}
+                  onChange={(e)=> setCity(e.target.value)}
+                  placeholder='City' />
                 </Form.Group>
 
                 <Form.Group as={Col} controlId="formGridState">
                   <Form.Label>State</Form.Label>
-                  <Form.Select defaultValue="BIHAR">
+                  <Form.Select 
+                    value={state}
+                    onChange={(e)=> setState(e.target.value)}   
+                    defaultValue="BIHAR">
                     <option>BIHAR</option>
                     <option>DELHI</option>
                     <option>HYDERABAD</option>
@@ -86,7 +169,10 @@ const Contact = () => {
 
                 <Form.Group as={Col} controlId="formGridZip">
                   <Form.Label>Zip code</Form.Label>
-                  <Form.Control placeholder='Zip code' />
+                  <Form.Control
+                   value={zip}
+                   onChange={(e)=> setZip(e.target.value)}
+                   placeholder='Zip code' />
                 </Form.Group>
               </Row>
 
