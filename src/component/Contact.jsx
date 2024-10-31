@@ -1,10 +1,13 @@
 import React, { useState } from 'react'
 import Card from 'react-bootstrap/Card';
-import photo from '../assets/Image1.png'
+import photo from '../assets/Image2.png';
 import { Container, Row, Col } from 'react-bootstrap';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import '../App.css'
+
 const Contact = () => {
   const[fname,setFname]=useState("");
   const[lname,setLname]=useState("");
@@ -19,58 +22,69 @@ const Contact = () => {
   const handlesubmit=async(e)=>{
     e.preventDefault("");
 
-  const contactdetails={
-    fname,
-    lname,
-    email,
-    password,
-    address1,
-    address2,
-    city,
-    state,
-    zip
-  };
+    const contactdetails={
+      fname,
+      lname,
+      email,
+      password,
+      address1,
+      address2,
+      city,
+      state,
+      zip
+    };
 
-  try{
-    const response = await fetch("http://localhost:5000/submit",{
-      method:"POST",
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(contactdetails),
-    });
-    if(response.ok){
-      console.log("contact saved");
+    try{
+      const response = await fetch("http://localhost:5000/submit",{
+        method:"POST",
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(contactdetails),
+      });
+      if(response.ok){
+        toast.success('Contact saved successfully', {
+          position: toast.POSITION.TOP_RIGHT,
+          autoClose: 3000,
+        });
 
-      // for clear form
-      setFname('');
-      setLname('');
-      setEmail('');
-      setPassword('');
-      setAddress1('');
-      setAddress2('');
-      setCity('');
-      setState('');
-      setZip('');
-    } else{
-      console.log("Error saving contact");
+        // Clear form
+        setFname('');
+        setLname('');
+        setEmail('');
+        setPassword('');
+        setAddress1('');
+        setAddress2('');
+        setCity('');
+        setState('');
+        setZip('');
+      } else {
+        toast.error('Error saving contact', {
+          position: toast.POSITION.TOP_RIGHT,
+          autoClose: 3000,
+        });
+      }
     }
-  }
-  catch(error){
-    console.error('Error:', error);
-  }
-};
+    catch(error){
+      console.error('Error:', error);
+      toast.error('Error saving contact', {
+        position: toast.POSITION.TOP_RIGHT,
+        autoClose: 3000,
+      });
+    }
+  };
 
   return (
     <section id="contact" className='bg-dark' style={{ maxWidth: "100%", maxHeight: "100%" }}>
       <Container fluid>
+        <ToastContainer position="top-right" autoClose={3000} />
         <div className='text-danger text-center p-5'>CONTACT</div>
         <div className='text-white text-center mt-1' style={{ fontSize: "45px", fontWeight: "700", fontFamily: "serif" }}>Contact With Me</div>
         <Row className="mt-4">
 
           <Col sm={12} md={5} lg={4}>
             <Card className="card-hover" style={{ width: '23rem', height: "auto", backgroundColor: "#23272b" }}>
-              <Card.Img variant="top" style={{ width: "auto", height: "400px", padding: "15px" }} src={photo} />
+              <Card.Img variant="top" style={{ width: "auto", height: "400px", padding: "20px",borderRadius:"50px"}} src={photo} />
               <Card.Body>
                 <Card.Title className='text-white p-2' style={{fontWeight:"700"}}>MD TAUQUEER MANZAR</Card.Title>
                 <Card.Text className='text-white p-2'>
@@ -179,7 +193,7 @@ const Contact = () => {
               <Form.Group className="mb-4" id="formGridCheckbox">
                 <Form.Check type="checkbox" label="Check me out" />
               </Form.Group>
-
+              
               <Button variant="primary" type="submit" style={{ width: "100%" }}>
                 Submit
               </Button>

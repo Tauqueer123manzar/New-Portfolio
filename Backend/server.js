@@ -2,7 +2,6 @@ const bodyParser = require("body-parser");
 const express=require("express");
 const mongoose=require("mongoose");
 const cors=require("cors");
-const contact =require("./models/contactSchema.js");
 const Contact = require("./models/contactSchema.js");
 
 const app=express();

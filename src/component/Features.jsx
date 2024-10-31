@@ -33,7 +33,7 @@ const Features = () => {
       id: 4,
       icon: <MdOutlineInstallMobile size={50} className='icon-animation' />,
       title: "Mobile Development",
-      description: 'Mobile development refers to the process of creating software applications that are specifically designed to run on mobile devices.'
+      description: 'Mobile development refers to the process of creatings  software applications that are specifically designed to run on mobile device.'
     },
     {
       id: 5,
@@ -58,9 +58,9 @@ const Features = () => {
             featureData.map(Features => {
               return (
                 <Col sm={12} md={6} lg={4} key={Features.id}>
-                  <Card className="bg-secondary card-hover" style={{ width: '20rem', height: "350px", margin: "7px", padding: "10px", marginLeft: "auto", marginRight: "auto" }}>
+                  <Card className="bg-secondary card-hover" style={{ width: '20rem', height: "350px", margin: "7px", padding: "8px", marginLeft: "auto", marginRight: "auto" }}>
                     <Card.Body
-                      className='text-center m-5 text-danger'> {Features.icon}
+                      className='text-center m-4 text-danger'> {Features.icon}
                       <Card.Title className='text-white fs-3'>{Features.title}</Card.Title>
                       <Card.Text className='text-white'>
                         {Features.description}
